@@ -36,29 +36,29 @@ export default function Lab() {
 
     return (
         <div className="content-area">
-            <section className="py-12">
-                <div className="flex flex-col gap-16">
+            <section className="py-8">
+                <div className="flex flex-col gap-12">
                     {/* Header */}
                     <div className="flex flex-col gap-6 max-w-3xl">
-                        <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">LAB</p>
-                        <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                        <p className="section-label">Lab</p>
+                        <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
                             Where Ideas go <br /> to breathe.
                         </h1>
-                        <p className="text-lg text-[var(--text-muted)] leading-relaxed max-w-2xl mt-4">
+                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-1">
                             Not everything needs to be a business. Some things are experiments. Some are contributions. Some are just fun. This is where I tinker, explore, and build in the open.
                         </p>
                     </div>
 
                     {/* Open Source */}
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">OPEN SOURCE</p>
+                            <p className="section-label">Open Source</p>
                         </div>
                         <div className="flex flex-col gap-6">
                             {experiments.map((lab, i) => (
                                 <motion.div
                                     key={i}
-                                    className="p-10 bg-[var(--selection-bg)] rounded-3xl flex flex-col gap-8 transition-all hover:shadow-sm"
+                                    className="p-7 bg-[var(--second-bg-color)] border border-[var(--border-color)] rounded-lg flex flex-col gap-6 transition-colors hover:bg-[var(--selection-bg)]/35"
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function Lab() {
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <div className="flex flex-wrap items-center gap-4">
-                                                <h2 className="text-2xl font-bold tracking-tight">{lab.title}</h2>
+                                                <h2 className="text-[1.6rem] font-medium tracking-tight">{lab.title}</h2>
                                                 <span className="px-3 py-1 border border-[var(--border-color)] text-[10px] font-mono rounded-md uppercase text-[var(--text-muted)]">
                                                     {lab.tag}
                                                 </span>
@@ -79,7 +79,7 @@ export default function Lab() {
                                             </p>
                                         </div>
                                     </div>
-                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-3xl ml-0 md:ml-16">
+                                    <p className="text-[13px] text-[var(--text-muted)] leading-relaxed max-w-3xl ml-0 md:ml-16">
                                         {lab.desc}
                                     </p>
                                     <div className="flex items-center gap-6 ml-0 md:ml-16">
@@ -95,13 +95,13 @@ export default function Lab() {
                     </div>
 
                     {/* Campaigns */}
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">CAMPAIGNS</p>
+                            <p className="section-label">Campaigns</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {campaigns.map((c, i) => (
-                                <div key={i} className="p-8 border border-[var(--border-color)] rounded-2xl flex flex-col gap-4 hover:bg-[var(--selection-bg)] transition-colors group">
+                                <div key={i} className="p-6 border border-[var(--border-color)] rounded-lg flex flex-col gap-4 hover:bg-[var(--selection-bg)] transition-colors group bg-[var(--second-bg-color)]">
                                     <div className="flex justify-between items-start">
                                         <h3 className="text-xl font-bold tracking-tight">{c.title}</h3>
                                         <span className={`text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest ${c.tag === 'Live' ? 'bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400' : 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800'}`}>
@@ -120,10 +120,10 @@ export default function Lab() {
                     </div>
 
                     {/* Philosophy */}
-                    <div className="flex flex-col gap-6 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-5">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">THE PHILOSOPHY</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">Why I keep a lab.</h2>
+                            <p className="section-label">The Philosophy</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Why I keep a lab.</h2>
                         </div>
                         <div className="flex flex-col gap-6 text-[var(--text-muted)] leading-relaxed max-w-2xl">
                             <p>I believe the best work happens when you're not trying to optimize for a bottom line. Curiosity needs a sandbox where the primary goal is just to see what happens.</p>

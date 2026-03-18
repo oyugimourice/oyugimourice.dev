@@ -19,23 +19,23 @@ export default function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="py-20 border-t border-[var(--border-color)]">
-            <div className="flex flex-col gap-10">
+        <section id="testimonials" className="section-block">
+            <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
-                    <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">TESTIMONIALS</p>
+                    <p className="section-label">Testimonials</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            className="flex flex-col gap-8 justify-between"
+                            className="flex flex-col gap-7 justify-between p-6 rounded-lg border border-[var(--border-color)] bg-[var(--second-bg-color)]"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <p className="text-base text-[var(--text-muted)] leading-relaxed">
+                            <p className="text-[13px] text-[var(--text-muted)] leading-relaxed">
                                 "{testimonial.quote}"
                             </p>
                             
@@ -44,8 +44,8 @@ export default function Testimonials() {
                                     <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-sm font-bold tracking-tight">{testimonial.name}</span>
-                                    <span className="text-[10px] font-bold uppercase tracking-tight text-[var(--text-muted)]">{testimonial.role}</span>
+                                    <span className="text-[13px] font-semibold tracking-tight">{testimonial.name}</span>
+                                    <span className="text-[10px] font-semibold uppercase tracking-tight text-[var(--text-muted)]">{testimonial.role}</span>
                                 </div>
                             </div>
                         </motion.div>

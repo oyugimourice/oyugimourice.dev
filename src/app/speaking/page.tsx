@@ -44,26 +44,26 @@ export default function Speaking() {
 
     return (
         <div className="content-area">
-            <section className="py-12">
-                <div className="flex flex-col gap-10">
+            <section className="py-8">
+                <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-6 max-w-3xl">
-                        <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">SPEAKING</p>
-                        <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                        <p className="section-label">Speaking</p>
+                        <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
                             Lessons worth sharing.
                         </h1>
-                        <p className="text-lg text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
                             Honest lessons from years of building products, leading teams, and figuring it out along the way. If your audience wants substance over polish, we'll get along.
                         </p>
-                        <button className="flex items-center gap-3 px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-bold rounded-lg w-max mt-4 transition-transform hover:scale-[1.02]">
-                            <i className="bx bx-calendar text-xl"></i>
+                        <button className="btn-primary w-max mt-1">
+                            <i className="bx bx-calendar text-sm"></i>
                             Let's Talk
                         </button>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-20 border-t border-[var(--border-color)] mt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 section-block mt-2">
                         <div className="flex flex-col gap-4">
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">THE STORY</p>
-                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why I speak.</h2>
+                            <p className="section-label">The Story</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight">Why I speak.</h2>
                         </div>
                         <div className="flex flex-col gap-6 text-[var(--text-muted)] leading-relaxed">
                             <p>I kept having the same conversations with founders, with engineers, with people trying to build something that matters and I realized these lessons might help more than just the person in front of me.</p>
@@ -72,10 +72,10 @@ export default function Speaking() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">TALK TOPICS</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">Ideas I keep coming back to.</h2>
+                            <p className="section-label">Talk Topics</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Ideas I keep coming back to.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 border border-[var(--border-color)] rounded-xl overflow-hidden">
                             {topics.map((t, i) => (
@@ -88,10 +88,10 @@ export default function Speaking() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">FORMATS</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">Ways we can work together.</h2>
+                            <p className="section-label">Formats</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Ways we can work together.</h2>
                         </div>
                         <div className="flex flex-col gap-0 border-t border-[var(--border-color)]">
                             {formats.map((f, i) => (
@@ -103,10 +103,10 @@ export default function Speaking() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">THE PRACTICAL STUFF</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">A few details.</h2>
+                            <p className="section-label">The Practical Stuff</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">A few details.</h2>
                         </div>
                         <div className="flex flex-col gap-0 border-t border-[var(--border-color)]">
                             {[
@@ -123,13 +123,13 @@ export default function Speaking() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-6 py-20 border-t border-[var(--border-color)]">
-                        <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">LET'S TALK</p>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">If this feels right, let's talk.</h2>
-                        <p className="text-lg text-[var(--text-muted)] max-w-2xl">Tell me about your event. Who's in the room. What you're hoping they walk away with. I'd love to hear what you're building.</p>
+                    <div className="section-block flex flex-col gap-5">
+                        <p className="section-label">Let's Talk</p>
+                        <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">If this feels right, let's talk.</h2>
+                        <p className="text-[15px] text-[var(--text-muted)] max-w-2xl">Tell me about your event. Who's in the room. What you're hoping they walk away with. I'd love to hear what you're building.</p>
                         <div className="flex items-center gap-6 mt-4">
-                            <button className="flex items-center gap-3 px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-bold rounded-lg w-max transition-transform hover:scale-[1.02]">
-                                <i className="bx bx-calendar text-xl"></i>
+                            <button className="btn-primary">
+                                <i className="bx bx-calendar text-sm"></i>
                                 Start a Conversation
                             </button>
                             <Link href="#" className="text-sm font-bold border-b border-[var(--text-color)] pb-1 hover:border-transparent transition-all">

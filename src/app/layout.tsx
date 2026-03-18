@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import { Manrope, JetBrains_Mono, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans-main",
 });
 
-const firaCode = Fira_Code({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-fira-code",
+  variable: "--font-mono",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -40,12 +46,14 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased text-[var(--text-color)] bg-[var(--bg-color)]`}>
-        <div className="flex flex-col lg:flex-row min-h-screen relative overflow-x-hidden">
-          <Header />
-          <main className="flex-1 w-full lg:ml-0 overflow-y-auto">
-            {children}
-          </main>
+      <body className={`${manrope.variable} ${jetbrainsMono.variable} ${cormorantGaramond.variable} antialiased text-[var(--text-color)] bg-[var(--bg-color)]`}>
+        <div className="w-full max-w-[1140px] mx-auto px-0 sm:px-4 lg:px-6">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8 min-h-screen relative">
+            <Header />
+            <main className="flex-1 w-full lg:ml-0">
+              {children}
+            </main>
+          </div>
         </div>
       </body>
     </html>

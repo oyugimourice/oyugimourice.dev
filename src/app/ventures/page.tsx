@@ -37,13 +37,13 @@ export default function Ventures() {
 
     return (
         <div className="content-area">
-            <section className="py-12">
-                <div className="flex flex-col gap-16">
+            <section className="py-8">
+                <div className="flex flex-col gap-12">
                     {/* Header */}
                     <div className="flex flex-col gap-2">
-                        <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">VENTURES</p>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--text-color)]">What I'm building.</h1>
-                        <p className="text-base text-[var(--text-muted)] leading-relaxed max-w-2xl mt-4">
+                        <p className="section-label">Ventures</p>
+                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-[var(--text-color)]">What I'm building.</h1>
+                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-3">
                             These are the businesses I'm actively growing. Each one started with a problem worth solving.
                         </p>
                     </div>
@@ -53,7 +53,7 @@ export default function Ventures() {
                         {ventures.map((v, i) => (
                             <motion.div
                                 key={i}
-                                className="p-10 bg-[var(--selection-bg)] rounded-2xl flex flex-col gap-8 transition-transform hover:scale-[1.005]"
+                                className="p-7 bg-[var(--second-bg-color)] border border-[var(--border-color)] rounded-lg flex flex-col gap-6 transition-colors hover:bg-[var(--selection-bg)]/35"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -61,15 +61,15 @@ export default function Ventures() {
                             >
                                 <div className="flex items-center gap-4">
                                     <h2 className={`text-2xl font-bold tracking-tighter ${v.color}`}>{v.name}</h2>
-                                    <span className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold rounded uppercase tracking-widest">
+                                    <span className="px-2.5 py-1 bg-black text-white dark:bg-white dark:text-black text-[10px] font-semibold rounded uppercase tracking-widest">
                                         {v.status}
                                     </span>
                                 </div>
                                 <div className="flex flex-col gap-4">
-                                    <p className="font-mono text-sm text-[var(--text-muted)] italic">
+                                    <p className="font-mono text-[12px] text-[var(--text-muted)] italic">
                                         {v.tagline}
                                     </p>
-                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                                    <p className="text-[13px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
                                         {v.desc}
                                     </p>
                                 </div>
@@ -81,16 +81,16 @@ export default function Ventures() {
                     </div>
 
                     {/* Lab Section */}
-                    <div className="flex flex-col gap-6 pt-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-5">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">LAB</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">Experiments & open source.</h2>
-                            <p className="text-base text-[var(--text-muted)] leading-relaxed max-w-2xl mt-4">
+                            <p className="section-label">Lab</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Experiments & open source.</h2>
+                            <p className="text-[14px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-3">
                                 Smaller bets. Prototypes, tools, and open source projects I build in public ~ some ship, some don't, all teach me something.
                             </p>
                         </div>
-                        <Link href="/lab" className="flex items-center gap-3 px-6 py-2.5 border border-[var(--border-color)] text-[var(--text-color)] font-bold rounded-lg w-max hover:bg-[var(--selection-bg)] transition-all">
-                            <i className="bx bx-vial text-xl"></i>
+                        <Link href="/lab" className="btn-secondary w-max">
+                            <i className="bx bx-vial text-sm"></i>
                             Visit the Lab
                         </Link>
                     </div>

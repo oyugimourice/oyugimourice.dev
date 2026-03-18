@@ -5,29 +5,29 @@ import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section id="home" className="min-h-[50vh] flex flex-col justify-center py-20 pb-24">
+        <section id="home" className="min-h-[34vh] flex flex-col justify-center py-10 pb-12">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-col gap-8"
+                className="flex flex-col gap-6"
             >
-                <h1 className="text-6xl md:text-7xl font-bold tracking-tight text-[var(--text-color)] leading-[0.9]">
+                <h1 className="text-[2.6rem] md:text-[3.05rem] font-medium tracking-tight text-[var(--text-color)] leading-[1.04]">
                     Build With Intention
                 </h1>
 
-                <p className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl leading-relaxed">
+                <p className="text-[15px] md:text-base text-[var(--text-muted)] max-w-2xl leading-relaxed">
                     Great tech starts with purpose, not code. I help founders <br className="hidden md:block" />
                     turn clarity into product.
                 </p>
 
-                <div className="flex flex-wrap gap-4 mt-4">
-                    <Link href="/newsletter" className="flex items-center gap-3 px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-bold rounded-lg transition-transform hover:scale-[1.02]">
-                        <i className="bx bx-envelope text-lg"></i>
+                <div className="flex flex-wrap gap-3 mt-2">
+                    <Link href="/newsletter" className="btn-primary">
+                        <i className="bx bx-envelope text-sm"></i>
                         Join the Newsletter
                     </Link>
-                    <Link href="/work-with-me" className="flex items-center gap-3 px-6 py-3 border border-[var(--border-color)] text-[var(--text-color)] font-bold rounded-lg hover:bg-[var(--selection-bg)] transition-all">
-                        <i className="bx bx-briefcase-alt-2 text-lg"></i>
+                    <Link href="/work-with-me" className="btn-secondary">
+                        <i className="bx bx-briefcase-alt-2 text-sm"></i>
                         Work With Me
                     </Link>
                 </div>

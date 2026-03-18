@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
@@ -28,49 +27,49 @@ export default function Newsletter() {
 
     return (
         <div className="content-area">
-            <section className="py-12">
-                <div className="flex flex-col gap-20">
+            <section className="py-8">
+                <div className="flex flex-col gap-14">
                     {/* Hero Section */}
-                    <div className="flex flex-col gap-8 max-w-3xl">
-                        <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">NEWSLETTER</p>
-                        <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                    <div className="flex flex-col gap-6 max-w-3xl">
+                        <p className="section-label">Newsletter</p>
+                        <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
                             Build With Intention
                         </h1>
-                        <p className="text-lg text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
                             Every Sunday, I share one idea to help you build smarter ~ as a founder, leader, or engineer.
                         </p>
 
-                        <form className="flex flex-col gap-6 mt-4 p-8 bg-[var(--selection-bg)] rounded-3xl border border-[var(--border-color)]">
+                        <form className="flex flex-col gap-5 mt-2 p-6 bg-[var(--second-bg-color)] rounded-lg border border-[var(--border-color)]">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="flex flex-col gap-2">
-                                    <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] ml-1">Name</label>
+                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)] ml-1">Name</label>
                                     <input 
                                         type="text" 
                                         placeholder="Your name" 
-                                        className="px-4 py-3 rounded-xl bg-[var(--bg-color)] border border-[var(--border-color)] text-sm focus:outline-none focus:ring-2 focus:ring-black transition-all"
+                                        className="px-4 py-2.5 rounded-md bg-[var(--bg-color)] border border-[var(--border-color)] text-sm focus:outline-none focus:ring-1 focus:ring-black transition-all"
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <label className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] ml-1">Email</label>
+                                    <label className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)] ml-1">Email</label>
                                     <input 
                                         type="email" 
                                         placeholder="you@example.com" 
-                                        className="px-4 py-3 rounded-xl bg-[var(--bg-color)] border border-[var(--border-color)] text-sm focus:outline-none focus:ring-2 focus:ring-black transition-all"
+                                        className="px-4 py-2.5 rounded-md bg-[var(--bg-color)] border border-[var(--border-color)] text-sm focus:outline-none focus:ring-1 focus:ring-black transition-all"
                                     />
                                 </div>
                             </div>
-                            <button className="flex items-center justify-center gap-3 px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-bold rounded-xl w-max transition-transform hover:scale-[1.02]">
-                                <i className="bx bx-envelope text-xl"></i>
+                            <button className="btn-primary w-max">
+                                <i className="bx bx-envelope text-sm"></i>
                                 Subscribe
                             </button>
                         </form>
                     </div>
 
                     {/* Pillars Section */}
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div>
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">WHAT TO EXPECT</p>
-                            <h2 className="text-3xl font-bold tracking-tight mt-2">Three pillars, one idea each week</h2>
+                            <p className="section-label">What To Expect</p>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Three pillars, one idea each week</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {pillars.map((p, i) => (
@@ -85,11 +84,11 @@ export default function Newsletter() {
                     </div>
 
                     {/* Archive Section */}
-                    <div className="flex flex-col gap-10 py-20 border-t border-[var(--border-color)]">
+                    <div className="section-block flex flex-col gap-8">
                         <div className="flex justify-between items-end">
                             <div>
-                                <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">PREVIOUS EDITIONS</p>
-                                <h2 className="text-3xl font-bold tracking-tight mt-2">See what's inside</h2>
+                                <p className="section-label">Previous Editions</p>
+                                <h2 className="text-[2rem] font-medium tracking-tight mt-2">See what&apos;s inside</h2>
                             </div>
                             <Link href="#" className="text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-color)] transition-colors">
                                 Browse all →
