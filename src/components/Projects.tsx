@@ -40,8 +40,8 @@ export default function Projects() {
                             transition={{ delay: index * 0.1 }}
                         >
                             <Link href={project.link} className={`block aspect-[16/9] rounded-lg overflow-hidden ${project.image} relative border border-[var(--border-color)] transition-transform duration-300 group-hover:scale-[1.005]`}>
-                                <div className="absolute inset-0 flex items-center justify-center p-12">
-                                    <h3 className="text-white text-[1.65rem] font-semibold tracking-tight opacity-90 group-hover:opacity-100 transition-opacity">
+                                <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-8 md:p-12">
+                                    <h3 className="text-white text-[1.35rem] sm:text-[1.5rem] md:text-[1.65rem] font-semibold tracking-tight opacity-90 group-hover:opacity-100 transition-opacity text-center">
                                         {project.title}
                                     </h3>
                                 </div>

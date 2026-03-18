@@ -81,11 +81,11 @@ body {
 }
 
 .sidebar-sticky {
-  @apply lg:sticky top-0 lg:h-screen w-full lg:w-[262px] border-b lg:border-b-0 lg:border-r-0 border-[var(--border-color)] px-5 py-6 lg:px-6 lg:py-7 flex flex-col justify-between;
+  @apply lg:sticky top-0 lg:h-screen w-full lg:w-[262px] border-b lg:border-b-0 lg:border-r-0 border-[var(--border-color)] px-4 py-4 lg:px-6 lg:py-7 flex flex-col justify-between;
 }
 
 .content-area {
-  @apply flex-1 px-5 py-8 lg:px-8 lg:py-10 max-w-[740px] xl:max-w-[760px] mx-auto;
+  @apply flex-1 px-4 py-7 sm:px-5 sm:py-8 lg:px-8 lg:py-10 max-w-[740px] xl:max-w-[760px] mx-auto;
 }
 
 .mono-text {
@@ -98,7 +98,7 @@ body {
 }
 
 .section-block {
-  @apply py-12 border-t border-[var(--border-color)];
+  @apply py-10 md:py-12 border-t border-[var(--border-color)];
 }
 
 .section-label {
