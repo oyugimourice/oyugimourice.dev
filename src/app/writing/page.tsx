@@ -32,8 +32,8 @@ export default function Writing() {
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2">
                         <p className="section-label">Writing</p>
-                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-[var(--text-color)]">Essays</h1>
-                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-3">
+                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-(--text-color)">Essays</h1>
+                        <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
                             Long-form thinking on AI, building, and what it means to create with intention.
                         </p>
                     </div>
@@ -48,16 +48,16 @@ export default function Writing() {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                             >
-                                <span className="text-sm font-mono text-[var(--text-muted)] pt-1">
+                                <span className="text-sm font-mono text-(--text-muted) pt-1">
                                     {essay.date}
                                 </span>
                                 <div className="flex flex-col gap-3">
-                                    <Link href={essay.link} className="group-hover:text-[var(--text-muted)] transition-colors">
-                                        <h2 className="text-[1.65rem] font-medium tracking-tight leading-snug text-[var(--text-color)] group-hover:text-inherit">
+                                    <Link href={essay.link} className="group-hover:text-(--text-muted) transition-colors">
+                                        <h2 className="text-[1.65rem] font-medium tracking-tight leading-snug text-(--text-color) group-hover:text-inherit">
                                             {essay.title}
                                         </h2>
                                     </Link>
-                                    <p className="text-[13px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                                    <p className="text-[13px] text-(--text-muted) leading-relaxed max-w-2xl">
                                         {essay.desc}
                                     </p>
                                 </div>

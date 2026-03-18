@@ -46,8 +46,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${manrope.variable} ${jetbrainsMono.variable} ${cormorantGaramond.variable} antialiased text-[var(--text-color)] bg-[var(--bg-color)]`}>
-        <div className="w-full max-w-[1140px] mx-auto px-0 sm:px-4 lg:px-6">
+      <body className={`${manrope.variable} ${jetbrainsMono.variable} ${cormorantGaramond.variable} antialiased text-(--text-color) bg-(--bg-color)`}>
+        <div className="w-full max-w-285 mx-auto px-0 sm:px-4 lg:px-6">
           <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8 min-h-screen relative">
             <Header />
             <main className="flex-1 w-full lg:ml-0">

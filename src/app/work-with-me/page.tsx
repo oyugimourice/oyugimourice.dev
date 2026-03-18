@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,16 +34,16 @@ export default function WorkWithMe() {
                     <div className="flex flex-col gap-6">
                         <p className="section-label">Work With Me</p>
                         
-                        <div className="flex gap-2 p-1 bg-[var(--selection-bg)] rounded-md w-max border border-[var(--border-color)]">
+                        <div className="flex gap-2 p-1 bg-(--selection-bg) rounded-md w-max border border-(--border-color)">
                             <button 
                                 onClick={() => setActiveTab("founders")}
-                                className={`px-4 py-1.5 text-[11px] font-semibold rounded transition-all ${activeTab === "founders" ? "bg-[var(--bg-color)]" : "text-[var(--text-muted)] hover:text-[var(--text-color)]"}`}
+                                className={`px-4 py-1.5 text-[11px] font-semibold rounded transition-all ${activeTab === "founders" ? "bg-(--bg-color)" : "text-(--text-muted) hover:text-(--text-color)"}`}
                             >
                                 Founders
                             </button>
                             <button 
                                 onClick={() => setActiveTab("mentoring")}
-                                className={`px-4 py-1.5 text-[11px] font-semibold rounded transition-all ${activeTab === "mentoring" ? "bg-[var(--bg-color)]" : "text-[var(--text-muted)] hover:text-[var(--text-color)]"}`}
+                                className={`px-4 py-1.5 text-[11px] font-semibold rounded transition-all ${activeTab === "mentoring" ? "bg-(--bg-color)" : "text-(--text-muted) hover:text-(--text-color)"}`}
                             >
                                 Mentoring
                             </button>
@@ -62,9 +63,9 @@ export default function WorkWithMe() {
                                 <div className="flex flex-col gap-6 max-w-3xl">
                                     <p className="section-label">Work With Me — Founders</p>
                                     <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
-                                        I've made the mistakes <br /> so you don't have to.
+                                        I&apos;ve made the mistakes <br /> so you don&apos;t have to.
                                     </h1>
-                                    <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                                    <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl">
                                         Strategic tech guidance for founders building something real. Think of me as the technical co-founder you call before things get expensive.
                                     </p>
                                     <button className="btn-primary w-max mt-1">
@@ -81,10 +82,10 @@ export default function WorkWithMe() {
                                             Building tech is hard. <br /> Building it wrong is expensive.
                                         </h2>
                                     </div>
-                                    <div className="flex flex-col gap-4 text-[var(--text-muted)] leading-relaxed">
-                                        <p>Most founders don't fail because of bad ideas. They fail because of bad tech decisions made too early — wrong stack, wrong hires, wrong priorities.</p>
-                                        <p>By the time you realize it, you've burned runway, lost time, and built something that doesn't scale.</p>
-                                        <p>I've been on both sides. I've made those calls. And I've learned what works.</p>
+                                    <div className="flex flex-col gap-4 text-(--text-muted) leading-relaxed">
+                                        <p>Most founders don&apos;t fail because of bad ideas. They fail because of bad tech decisions made too early — wrong stack, wrong hires, wrong priorities.</p>
+                                        <p>By the time you realize it, you&apos;ve burned runway, lost time, and built something that doesn&apos;t scale.</p>
+                                        <p>I&apos;ve been on both sides. I&apos;ve made those calls. And I&apos;ve learned what works.</p>
                                     </div>
                                 </div>
 
@@ -94,11 +95,11 @@ export default function WorkWithMe() {
                                         <p className="section-label">What I Help With</p>
                                         <h2 className="text-[2rem] font-medium tracking-tight mt-2">Where I come in.</h2>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-3 border border-[var(--border-color)] rounded-xl overflow-hidden">
+                                    <div className="grid grid-cols-1 md:grid-cols-3 border border-(--border-color) rounded-xl overflow-hidden">
                                         {founderServices.map((s, i) => (
-                                            <div key={i} className="p-8 border-[0.5px] border-[var(--border-color)] flex flex-col gap-3 hover:bg-[var(--selection-bg)] transition-colors">
+                                            <div key={i} className="p-8 border-[0.5px] border-(--border-color) flex flex-col gap-3 hover:bg-(--selection-bg) transition-colors">
                                                 <h3 className="font-bold text-base">{s.title}</h3>
-                                                <p className="text-sm text-[var(--text-muted)] leading-relaxed">{s.desc}</p>
+                                                <p className="text-sm text-(--text-muted) leading-relaxed">{s.desc}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -116,14 +117,14 @@ export default function WorkWithMe() {
                                             { num: "Option 2", title: "Strategy Sprint", desc: "Intensive 2-4 week engagement on a specific roadmap or audit.", bestFor: "Founders facing a critical decision point." },
                                             { num: "Option 3", title: "One-Off Session", desc: "Single deep-dive call for clarity on a specific challenge.", bestFor: "Founders who need a second opinion fast." }
                                         ].map((o, i) => (
-                                            <div key={i} className="p-6 border border-[var(--border-color)] rounded-lg bg-[var(--second-bg-color)] flex flex-col gap-8 hover:bg-[var(--selection-bg)] transition-colors">
+                                            <div key={i} className="p-6 border border-(--border-color) rounded-lg bg-(--second-bg-color) flex flex-col gap-8 hover:bg-(--selection-bg) transition-colors">
                                                 <div className="flex flex-col gap-4">
-                                                    <span className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">{o.num}</span>
+                                                    <span className="text-[10px] font-bold tracking-widest text-(--text-muted) uppercase">{o.num}</span>
                                                     <h3 className="text-2xl font-bold">{o.title}</h3>
-                                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">{o.desc}</p>
+                                                    <p className="text-sm text-(--text-muted) leading-relaxed">{o.desc}</p>
                                                 </div>
-                                                <div className="mt-auto pt-8 border-t border-[var(--border-color)]">
-                                                    <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase mb-2">BEST FOR</p>
+                                                <div className="mt-auto pt-8 border-t border-(--border-color)">
+                                                    <p className="text-[10px] font-bold tracking-widest text-(--text-muted) uppercase mb-2">BEST FOR</p>
                                                     <p className="text-xs font-bold">{o.bestFor}</p>
                                                 </div>
                                             </div>
@@ -145,7 +146,7 @@ export default function WorkWithMe() {
                                     <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
                                         Launch your career <br /> with intention.
                                     </h1>
-                                    <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                                    <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl">
                                         For developers and aspiring founders who want more than a job. I help you build skills that compound — so you can build a career that matters.
                                     </p>
                                     <button className="btn-primary w-max mt-1">
@@ -159,27 +160,27 @@ export default function WorkWithMe() {
                                     <div className="flex flex-col gap-4">
                                         <p className="section-label">The Problem</p>
                                         <h2 className="text-[2rem] font-medium tracking-tight">
-                                            Tutorials won't get <br /> you there.
+                                            Tutorials won&apos;t get <br /> you there.
                                         </h2>
                                     </div>
-                                    <div className="flex flex-col gap-4 text-[var(--text-muted)] leading-relaxed">
-                                        <p>You can watch all the courses you want, but they won't show you how things actually work in the real world.</p>
-                                        <p>The gap between knowledge and skills is where most developers stall. AI is changing where focus should go, and how to build. Tutorials don't show you the context.</p>
-                                        <p>As your mentor, I don't give you a curriculum. I give you the context, challenges, and support you actually need to build things — and help you avoid the confusion.</p>
+                                    <div className="flex flex-col gap-4 text-(--text-muted) leading-relaxed">
+                                        <p>You can watch all the courses you want, but they won&apos;t show you how things actually work in the real world.</p>
+                                        <p>The gap between knowledge and skills is where most developers stall. AI is changing where focus should go, and how to build. Tutorials don&apos;t show you the context.</p>
+                                        <p>As your mentor, I don&apos;t give you a curriculum. I give you the context, challenges, and support you actually need to build things — and help you avoid the confusion.</p>
                                     </div>
                                 </div>
 
                                 {/* Focus Areas */}
                                 <div className="section-block flex flex-col gap-8">
                                     <div>
-                                        <p className="section-label">What We'll Focus On</p>
-                                        <h2 className="text-[2rem] font-medium tracking-tight mt-2">What we'll focus on.</h2>
+                                        <p className="section-label">What We&apos;ll Focus On</p>
+                                        <h2 className="text-[2rem] font-medium tracking-tight mt-2">What we&apos;ll focus on.</h2>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-3 border border-[var(--border-color)] rounded-xl overflow-hidden">
+                                    <div className="grid grid-cols-1 md:grid-cols-3 border border-(--border-color) rounded-xl overflow-hidden">
                                         {mentoringFocus.map((s, i) => (
-                                            <div key={i} className="p-8 border-[0.5px] border-[var(--border-color)] flex flex-col gap-3 hover:bg-[var(--selection-bg)] transition-colors">
+                                            <div key={i} className="p-8 border-[0.5px] border-(--border-color) flex flex-col gap-3 hover:bg-(--selection-bg) transition-colors">
                                                 <h3 className="font-bold text-base">{s.title}</h3>
-                                                <p className="text-sm text-[var(--text-muted)] leading-relaxed">{s.desc}</p>
+                                                <p className="text-sm text-(--text-muted) leading-relaxed">{s.desc}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -197,9 +198,9 @@ export default function WorkWithMe() {
                                             { title: "Async Support", desc: "Message me between calls. Code questions, architecture, career decisions — I'm in your corner." },
                                             { title: "Accountability", desc: "No excuses. Clarity, then consistency. We set goals, we hit them, we move up." }
                                         ].map((o, i) => (
-                                            <div key={i} className="p-6 border border-[var(--border-color)] rounded-lg bg-[var(--second-bg-color)] flex flex-col gap-4 hover:bg-[var(--selection-bg)] transition-colors">
+                                            <div key={i} className="p-6 border border-(--border-color) rounded-lg bg-(--second-bg-color) flex flex-col gap-4 hover:bg-(--selection-bg) transition-colors">
                                                 <h3 className="text-[1.5rem] font-medium">{o.title}</h3>
-                                                <p className="text-sm text-[var(--text-muted)] leading-relaxed">{o.desc}</p>
+                                                <p className="text-sm text-(--text-muted) leading-relaxed">{o.desc}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -210,7 +211,7 @@ export default function WorkWithMe() {
 
                     {/* Checklists - Common to both */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 section-block">
-                        <div className="flex flex-col gap-6 p-6 bg-[var(--second-bg-color)] border border-[var(--border-color)] rounded-lg">
+                        <div className="flex flex-col gap-6 p-6 bg-(--second-bg-color) border border-(--border-color) rounded-lg">
                             <p className="section-label">This Is For You If...</p>
                             <h3 className="text-[1.5rem] font-medium">This is for you if...</h3>
                             <ul className="flex flex-col gap-4">
@@ -222,7 +223,7 @@ export default function WorkWithMe() {
                                     "You're preparing for a fundraise and need your tech story straight"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
-                                        <i className="bx bx-check text-[var(--text-color)] text-lg"></i>
+                                        <i className="bx bx-check text-(--text-color) text-lg"></i>
                                         {item}
                                     </li>
                                 )) : [
@@ -233,22 +234,22 @@ export default function WorkWithMe() {
                                     "You're ready to put in work that goes beyond tutorials and checklists"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 text-sm leading-relaxed">
-                                        <i className="bx bx-check text-[var(--text-color)] text-lg"></i>
+                                        <i className="bx bx-check text-(--text-color) text-lg"></i>
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="flex flex-col gap-6 p-6 border border-[var(--border-color)] rounded-lg bg-[var(--second-bg-color)]">
-                            <p className="section-label">This Isn't For You If...</p>
-                            <h3 className="text-[1.5rem] font-medium text-[var(--text-muted)]">This probably isn't for you if...</h3>
+                        <div className="flex flex-col gap-6 p-6 border border-(--border-color) rounded-lg bg-(--second-bg-color)">
+                            <p className="section-label">This Isn&apos;t For You If...</p>
+                            <h3 className="text-[1.5rem] font-medium text-(--text-muted)">This probably isn&apos;t for you if...</h3>
                             <ul className="flex flex-col gap-4">
                                 {activeTab === "founders" ? [
                                     "You want someone to just execute your spec",
                                     "You're looking for a dev shop or agency",
                                     "You're not ready to be challenged on your assumptions"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex gap-3 text-sm text-[var(--text-muted)] leading-relaxed">
+                                    <li key={i} className="flex gap-3 text-sm text-(--text-muted) leading-relaxed">
                                         <i className="bx bx-x text-lg"></i>
                                         {item}
                                     </li>
@@ -258,7 +259,7 @@ export default function WorkWithMe() {
                                     "You want individual and constant resume reviews",
                                     "You're looking for code instructions or step-by-step trial growth"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex gap-3 text-sm text-[var(--text-muted)] leading-relaxed">
+                                    <li key={i} className="flex gap-3 text-sm text-(--text-muted) leading-relaxed">
                                         <i className="bx bx-x text-lg"></i>
                                         {item}
                                     </li>
@@ -279,7 +280,7 @@ export default function WorkWithMe() {
                             ].map((w, i) => (
                                 <div key={i} className="flex flex-col gap-3 p-1">
                                     <h3 className="font-bold text-lg">{w.title}</h3>
-                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">{w.desc}</p>
+                                    <p className="text-sm text-(--text-muted) leading-relaxed">{w.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -288,19 +289,25 @@ export default function WorkWithMe() {
                     {/* Testimonial Section */}
                     <div className="section-block flex flex-col gap-8">
                         <p className="section-label">Testimonials</p>
-                        <div className="p-6 border border-[var(--border-color)] bg-[var(--second-bg-color)] rounded-lg max-w-3xl">
-                            <p className="text-sm text-[var(--text-muted)] leading-relaxed italic mb-6">
+                        <div className="p-6 border border-(--border-color) bg-(--second-bg-color) rounded-lg max-w-3xl">
+                            <p className="text-sm text-(--text-muted) leading-relaxed italic mb-6">
                                 {activeTab === "founders" 
-                                    ? `"Sahil has an amazing attitude to lead and build any kind of project. From its ideation, brainstorming, definition, and build. It doesn't matter how big or small, rationale or crazy the concept is, he will put all of his heart into it."`
+                                    ? `"Oyugi has an amazing attitude to lead and build any kind of project. From its ideation, brainstorming, definition, and build. It doesn't matter how big or small, rationale or crazy the concept is, he will put all of his heart into it."`
                                     : `"What made it worthwhile was its hands-on, unfiltered format — everything done live, from brainstorming to coding and debugging. Not theory, the actual process of building a startup product step-by-step. I walked away with practical technical insights and a much clearer view of how to take an idea to a product."`}
                             </p>
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full overflow-hidden grayscale">
-                                    <img src={activeTab === "founders" ? "https://i.pravatar.cc/150?u=marga" : "https://i.pravatar.cc/150?u=aayush"} alt="Testimonial Author" className="w-full h-full object-cover" />
+                                    <Image
+                                        src={activeTab === "founders" ? "https://i.pravatar.cc/150?u=marga" : "https://i.pravatar.cc/150?u=aayush"} 
+                                        alt={"Testimonial Author"}
+                                        width={40}
+                                        height={40}
+                                        className="w-full h-full object-cover" 
+                                    />
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-sm font-bold">{activeTab === "founders" ? "Marga López" : "Aayush Pradhan"}</span>
-                                    <span className="text-[10px] text-[var(--text-muted)] uppercase font-bold tracking-widest">{activeTab === "founders" ? "Senior Software Engineer & Tech Lead" : "Student & Aspiring Software Engineer"}</span>
+                                    <span className="text-[10px] text-(--text-muted) uppercase font-bold tracking-widest">{activeTab === "founders" ? "Senior Software Engineer & Tech Lead" : "Student & Aspiring Software Engineer"}</span>
                                 </div>
                             </div>
                         </div>
@@ -308,13 +315,13 @@ export default function WorkWithMe() {
 
                     {/* Commitment Section */}
                     {activeTab === "mentoring" && (
-                        <div className="flex flex-col gap-4 py-20 border-t border-[var(--border-color)]">
-                            <p className="text-[10px] font-bold tracking-widest text-[var(--text-muted)] uppercase">COMMITMENT</p>
+                        <div className="flex flex-col gap-4 py-20 border-t border-(--border-color)">
+                            <p className="text-[10px] font-bold tracking-widest text-(--text-muted) uppercase">COMMITMENT</p>
                             <h2 className="text-3xl font-bold tracking-tight">A commitment for both of us.</h2>
-                            <p className="text-base text-[var(--text-muted)] leading-relaxed max-w-2xl">
-                                Price depends on format and frequency. Apply below and we'll figure out what makes sense for where you are and where you're going.
+                            <p className="text-base text-(--text-muted) leading-relaxed max-w-2xl">
+                                Price depends on format and frequency. Apply below and we&apos;ll figure out what makes sense for where you are and where you&apos;re going.
                             </p>
-                            <p className="text-sm font-bold mt-2 italic">I keep the cohort small so I can show up fully. This isn't a course, it's an investment.</p>
+                            <p className="text-sm font-bold mt-2 italic">I keep the cohort small so I can show up fully. This isn&apos;t a course, it&apos;s an investment.</p>
                         </div>
                     )}
 
@@ -324,7 +331,7 @@ export default function WorkWithMe() {
                         <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">
                             {activeTab === "founders" ? "Let's figure it out together." : "Ready to build with intention?"}
                         </h2>
-                        <p className="text-[15px] text-[var(--text-muted)]">
+                        <p className="text-[15px] text-(--text-muted)">
                             {activeTab === "founders" ? "One call. No pitch. Just clarity on what to do next." : "Tell me where you are, where you want to go, and why this matters to you."}
                         </p>
                         <div className="flex flex-col gap-4 mt-4">
@@ -334,12 +341,12 @@ export default function WorkWithMe() {
                                     {activeTab === "founders" ? "Book a Call" : "Apply via Newsletter"}
                                 </button>
                                 {activeTab === "founders" && (
-                                    <Link href="#" className="text-sm font-bold border-b border-[var(--text-color)] pb-1 hover:border-transparent transition-all">
+                                    <Link href="#" className="text-sm font-bold border-b border-(--text-color) pb-1 hover:border-transparent transition-all">
                                         Or send me a message — I read everything.
                                     </Link>
                                 )}
                             </div>
-                            {activeTab === "mentoring" && <p className="text-[10px] text-[var(--text-muted)] uppercase font-bold tracking-widest">I READ EVERY APPLICATION PERSONALLY.</p>}
+                            {activeTab === "mentoring" && <p className="text-[10px] text-(--text-muted) uppercase font-bold tracking-widest">I READ EVERY APPLICATION PERSONALLY.</p>}
                         </div>
                     </div>
                 </div>

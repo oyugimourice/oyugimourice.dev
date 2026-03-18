@@ -42,9 +42,9 @@ export default function Ventures() {
                     {/* Header */}
                     <div className="flex flex-col gap-2">
                         <p className="section-label">Ventures</p>
-                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-[var(--text-color)]">What I'm building.</h1>
-                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-3">
-                            These are the businesses I'm actively growing. Each one started with a problem worth solving.
+                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-(--text-color)">What I&apos;m building.</h1>
+                        <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
+                            These are the businesses I&apos;m actively growing. Each one started with a problem worth solving.
                         </p>
                     </div>
 
@@ -53,7 +53,7 @@ export default function Ventures() {
                         {ventures.map((v, i) => (
                             <motion.div
                                 key={i}
-                                className="p-7 bg-[var(--second-bg-color)] border border-[var(--border-color)] rounded-lg flex flex-col gap-6 transition-colors hover:bg-[var(--selection-bg)]/35"
+                                className="p-7 bg-(--second-bg-color) border border-(--border-color) rounded-lg flex flex-col gap-6 transition-colors hover:bg-(--selection-bg)/35"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -66,10 +66,10 @@ export default function Ventures() {
                                     </span>
                                 </div>
                                 <div className="flex flex-col gap-4">
-                                    <p className="font-mono text-[12px] text-[var(--text-muted)] italic">
+                                    <p className="font-mono text-[12px] text-(--text-muted) italic">
                                         {v.tagline}
                                     </p>
-                                    <p className="text-[13px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
+                                    <p className="text-[13px] text-(--text-muted) leading-relaxed max-w-2xl">
                                         {v.desc}
                                     </p>
                                 </div>
@@ -85,8 +85,8 @@ export default function Ventures() {
                         <div>
                             <p className="section-label">Lab</p>
                             <h2 className="text-[2rem] font-medium tracking-tight mt-2">Experiments & open source.</h2>
-                            <p className="text-[14px] text-[var(--text-muted)] leading-relaxed max-w-2xl mt-3">
-                                Smaller bets. Prototypes, tools, and open source projects I build in public ~ some ship, some don't, all teach me something.
+                            <p className="text-[14px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
+                                Smaller bets. Prototypes, tools, and open source projects I build in public ~ some ship, some don&apos;t, all teach me something.
                             </p>
                         </div>
                         <Link href="/lab" className="btn-secondary w-max">

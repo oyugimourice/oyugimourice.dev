@@ -33,31 +33,31 @@ export default function About() {
             <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
                     <p className="section-label">Work With Me</p>
-                    <h2 className="text-[2rem] font-medium tracking-tight text-[var(--text-color)]">How I can help you</h2>
+                    <h2 className="text-[2rem] font-medium tracking-tight text-(--text-color)">How I can help you</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            className={`${service.bg} p-7 rounded-lg border border-[var(--border-color)] flex flex-col gap-6 justify-between ${service.fullWidth ? "md:col-span-2" : ""}`}
+                            className={`${service.bg} p-7 rounded-lg border border-(--border-color) flex flex-col gap-6 justify-between ${service.fullWidth ? "md:col-span-2" : ""}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className="flex flex-col gap-4">
-                                <span className="text-[10px] font-semibold tracking-widest uppercase text-[var(--text-muted)]">
+                                <span className="text-[10px] font-semibold tracking-widest uppercase text-(--text-muted)">
                                     {service.tag}
                                 </span>
-                                <h3 className="text-[1.7rem] font-medium tracking-tight leading-tight max-w-md text-[var(--text-color)]">
+                                <h3 className="text-[1.7rem] font-medium tracking-tight leading-tight max-w-md text-(--text-color)">
                                     {service.title}
                                 </h3>
-                                <p className="text-[13px] text-[var(--text-muted)] leading-relaxed max-w-xl">
+                                <p className="text-[13px] text-(--text-muted) leading-relaxed max-w-xl">
                                     {service.desc}
                                 </p>
                             </div>
-                            <button className="w-max px-3 py-1.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-md text-[10px] font-semibold uppercase tracking-widest text-[var(--text-color)] hover:bg-[var(--selection-bg)] transition-colors">
+                            <button className="w-max px-3 py-1.5 bg-(--bg-color) border border-(--border-color) rounded-md text-[10px] font-semibold uppercase tracking-widest text-(--text-color) hover:bg-(--selection-bg) transition-colors">
                                 {service.button}
                             </button>
                         </motion.div>

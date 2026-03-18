@@ -12,11 +12,11 @@ export default function Hero() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col gap-6"
             >
-                <h1 className="text-[2.6rem] md:text-[3.05rem] font-medium tracking-tight text-[var(--text-color)] leading-[1.04]">
+                <h1 className="text-[2.6rem] md:text-[3.05rem] font-medium tracking-tight text-(--text-color) leading-[1.04]">
                     Build With Intention
                 </h1>
 
-                <p className="text-[15px] md:text-base text-[var(--text-muted)] max-w-2xl leading-relaxed">
+                <p className="text-[15px] md:text-base text-(--text-muted) max-w-2xl leading-relaxed">
                     Great tech starts with purpose, not code. I help founders <br className="hidden md:block" />
                     turn clarity into product.
                 </p>

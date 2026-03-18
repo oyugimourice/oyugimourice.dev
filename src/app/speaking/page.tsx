@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
@@ -51,12 +50,12 @@ export default function Speaking() {
                         <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
                             Lessons worth sharing.
                         </h1>
-                        <p className="text-[15px] text-[var(--text-muted)] leading-relaxed max-w-2xl">
-                            Honest lessons from years of building products, leading teams, and figuring it out along the way. If your audience wants substance over polish, we'll get along.
+                        <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl">
+                            Honest lessons from years of building products, leading teams, and figuring it out along the way. If your audience wants substance over polish, we&apos;ll get along.
                         </p>
                         <button className="btn-primary w-max mt-1">
                             <i className="bx bx-calendar text-sm"></i>
-                            Let's Talk
+                            Let&apos;s Talk
                         </button>
                     </div>
 
@@ -65,10 +64,10 @@ export default function Speaking() {
                             <p className="section-label">The Story</p>
                             <h2 className="text-[2rem] font-medium tracking-tight">Why I speak.</h2>
                         </div>
-                        <div className="flex flex-col gap-6 text-[var(--text-muted)] leading-relaxed">
+                        <div className="flex flex-col gap-6 text-(--text-muted) leading-relaxed">
                             <p>I kept having the same conversations with founders, with engineers, with people trying to build something that matters and I realized these lessons might help more than just the person in front of me.</p>
                             <p>I speak about building. About clarity. About intention. About the messy, unglamorous work of turning ideas into something real.</p>
-                            <p>If that resonates with your audience, I'd love to be part of what you're creating.</p>
+                            <p>If that resonates with your audience, I&apos;d love to be part of what you&apos;re creating.</p>
                         </div>
                     </div>
 
@@ -77,11 +76,11 @@ export default function Speaking() {
                             <p className="section-label">Talk Topics</p>
                             <h2 className="text-[2rem] font-medium tracking-tight mt-2">Ideas I keep coming back to.</h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 border border-[var(--border-color)] rounded-xl overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-2 border border-(--border-color) rounded-xl overflow-hidden">
                             {topics.map((t, i) => (
-                                <div key={i} className="p-8 border-[0.5px] border-[var(--border-color)] flex flex-col gap-3 hover:bg-[var(--selection-bg)] transition-colors">
+                                <div key={i} className="p-8 border-[0.5px] border-(--border-color) flex flex-col gap-3 hover:bg-(--selection-bg) transition-colors">
                                     <h3 className="font-bold text-base">{t.title}</h3>
-                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">{t.desc}</p>
+                                    <p className="text-sm text-(--text-muted) leading-relaxed">{t.desc}</p>
                                     {t.link && <Link href="#" className="text-xs font-bold border-b border-black w-max pb-0.5 mt-2">{t.link}</Link>}
                                 </div>
                             ))}
@@ -93,11 +92,11 @@ export default function Speaking() {
                             <p className="section-label">Formats</p>
                             <h2 className="text-[2rem] font-medium tracking-tight mt-2">Ways we can work together.</h2>
                         </div>
-                        <div className="flex flex-col gap-0 border-t border-[var(--border-color)]">
+                        <div className="flex flex-col gap-0 border-t border-(--border-color)">
                             {formats.map((f, i) => (
-                                <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] py-6 border-b border-[var(--border-color)] group hover:bg-[var(--selection-bg)] px-4 transition-colors">
+                                <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] py-6 border-b border-(--border-color) group hover:bg-(--selection-bg) px-4 transition-colors">
                                     <span className="font-bold text-sm">{f.type}</span>
-                                    <span className="text-sm text-[var(--text-muted)] leading-relaxed">{f.desc}</span>
+                                    <span className="text-sm text-(--text-muted) leading-relaxed">{f.desc}</span>
                                 </div>
                             ))}
                         </div>
@@ -108,31 +107,31 @@ export default function Speaking() {
                             <p className="section-label">The Practical Stuff</p>
                             <h2 className="text-[2rem] font-medium tracking-tight mt-2">A few details.</h2>
                         </div>
-                        <div className="flex flex-col gap-0 border-t border-[var(--border-color)]">
+                        <div className="flex flex-col gap-0 border-t border-(--border-color)">
                             {[
                                 { label: "Based in", value: "Nairobi, Available anywhere." },
                                 { label: "Virtual", value: "Absolutely — for podcasts, webinars, remote events." },
                                 { label: "Fees", value: "Vary by format, travel, and context. Let's have a conversation." },
                                 { label: "Lead Time", value: "More is better, but I'll make it work for the right fit." }
                             ].map((detail, i) => (
-                                <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] py-6 border-b border-[var(--border-color)] group hover:bg-[var(--selection-bg)] px-4 transition-colors">
+                                <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] py-6 border-b border-(--border-color) group hover:bg-(--selection-bg) px-4 transition-colors">
                                     <span className="font-bold text-sm tracking-tight">{detail.label}</span>
-                                    <span className="text-sm text-[var(--text-muted)] leading-relaxed">{detail.value}</span>
+                                    <span className="text-sm text-(--text-muted) leading-relaxed">{detail.value}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     <div className="section-block flex flex-col gap-5">
-                        <p className="section-label">Let's Talk</p>
-                        <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">If this feels right, let's talk.</h2>
-                        <p className="text-[15px] text-[var(--text-muted)] max-w-2xl">Tell me about your event. Who's in the room. What you're hoping they walk away with. I'd love to hear what you're building.</p>
+                        <p className="section-label">Let&apos;s Talk</p>
+                        <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">If this feels right, let&apos;s talk.</h2>
+                        <p className="text-[15px] text-(--text-muted) max-w-2xl">Tell me about your event. Who&apos;s in the room. What you&apos;re hoping they walk away with. I&apos;d love to hear what you&apos;re building.</p>
                         <div className="flex items-center gap-6 mt-4">
                             <button className="btn-primary">
                                 <i className="bx bx-calendar text-sm"></i>
                                 Start a Conversation
                             </button>
-                            <Link href="#" className="text-sm font-bold border-b border-[var(--text-color)] pb-1 hover:border-transparent transition-all">
+                            <Link href="#" className="text-sm font-bold border-b border-(--text-color) pb-1 hover:border-transparent transition-all">
                                 Or email me — I read everything.
                             </Link>
                         </div>
