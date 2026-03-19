@@ -50,7 +50,7 @@ export default function RootLayout({
         <div className="w-full max-w-285 mx-auto px-0 sm:px-4 lg:px-6">
           <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8 min-h-screen relative">
             <Header />
-            <main className="flex-1 w-full lg:ml-0">
+            <main className="flex-1 min-w-0 w-full lg:ml-0">
               {children}
             </main>
           </div>
