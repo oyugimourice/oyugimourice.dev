@@ -8,26 +8,41 @@ import { usePathname } from "next/navigation";
 export default function Header() {
     const pathname = usePathname();
     const [activeSection, setActiveSection] = useState("home");
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        if (typeof window === "undefined") return false;
-
-        const savedTheme = localStorage.getItem("theme");
-        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        return savedTheme === "dark" || (!savedTheme && systemPrefersDark);
-    });
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isThemeReady, setIsThemeReady] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark");
-            document.documentElement.classList.remove("light");
-            localStorage.setItem("theme", "dark");
+    const applyTheme = (darkMode: boolean) => {
+        const root = document.documentElement;
+        root.classList.add("theme-switching");
+
+        if (darkMode) {
+            root.classList.add("dark");
+            root.classList.remove("light");
         } else {
-            document.documentElement.classList.add("light");
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
+            root.classList.add("light");
+            root.classList.remove("dark");
         }
-    }, [isDarkMode]);
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                root.classList.remove("theme-switching");
+            });
+        });
+    };
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const nextIsDark = savedTheme === "dark" || (!savedTheme && systemPrefersDark);
+
+        applyTheme(nextIsDark);
+
+        queueMicrotask(() => {
+            setIsDarkMode(nextIsDark);
+            setIsThemeReady(true);
+        });
+    }, []);
 
     useEffect(() => {
         if (pathname !== "/") return;
@@ -53,11 +68,10 @@ export default function Header() {
     }, [pathname]);
 
     const toggleTheme = (type: "light" | "dark") => {
-        if (type === "dark") {
-            setIsDarkMode(true);
-        } else {
-            setIsDarkMode(false);
-        }
+        const nextIsDark = type === "dark";
+        setIsDarkMode(nextIsDark);
+        applyTheme(nextIsDark);
+        localStorage.setItem("theme", nextIsDark ? "dark" : "light");
     };
 
     const closeMobileMenu = () => {
@@ -69,6 +83,7 @@ export default function Header() {
         { name: "Work With Me", href: "/work-with-me", icon: "bx bx-briefcase-alt-2" },
         { name: "Writing", href: "/writing", icon: "bx bx-edit-alt" },
         { name: "Speaking", href: "/speaking", icon: "bx bx-microphone" },
+        { name: "Podcast", href: "/podcast", icon: "bx bx-podcast" },
         { name: "Ventures", href: "/ventures", icon: "bx bx-rocket" },
         { name: "Lab", href: "/lab", icon: "bx bx-vial" },
     ];
@@ -150,7 +165,7 @@ export default function Header() {
                             <div className="flex items-center justify-between gap-2.5 px-2.5 py-1.5 rounded-md text-[12px] font-medium text-(--text-muted)/70">
                                 <span className="flex items-center gap-2.5">
                                     <i className="bx bx-book-open text-[14px]"></i>
-                                    Developer&apos;s Read
+                                    Founder&apos;s Read
                                 </span>
                                 <span className="text-[10px] tracking-wide">SOON</span>
                             </div>
@@ -158,7 +173,7 @@ export default function Header() {
                     </nav>
                 </div>
 
-                <div className="flex flex-col gap-5 pt-6 mt-8 lg:mt-auto border-t border-(--border-color)">
+                <div className="flex flex-col gap-5 pt-6 mt-6 lg:mt-6 border-t border-(--border-color)">
                     <div className="flex items-center gap-3 px-2.5">
                         <div className="w-9 h-9 rounded-full bg-neutral-200 overflow-hidden border border-(--border-color)">
                             <Image
@@ -199,17 +214,19 @@ export default function Header() {
                         <p className="text-[10px] text-(--text-muted) leading-relaxed">
                             Designed & Developed by Oyugi Mourice
                         </p>
-                        <div className="flex p-0.5 bg-(--selection-bg) rounded-md w-max border border-(--border-color)">
+                        <div className="inline-flex items-center gap-1 p-1 bg-(--selection-bg) rounded-lg w-max border border-(--border-color)">
                             <button
                                 onClick={() => isDarkMode && toggleTheme("light")}
-                                className={`p-1 px-2.5 text-[10px] font-semibold rounded transition-all ${!isDarkMode ? "bg-(--bg-color) text-(--text-color)" : "text-(--text-muted) hover:text-(--text-color)"}`}
+                                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-semibold rounded-md transition-all ${(isThemeReady && !isDarkMode) ? "bg-black text-white shadow-sm" : "text-(--text-muted) hover:text-(--text-color)"}`}
                             >
+                                <i className="bx bx-sun text-[12px]"></i>
                                 Light
                             </button>
                             <button
                                 onClick={() => !isDarkMode && toggleTheme("dark")}
-                                className={`p-1 px-2.5 text-[10px] font-semibold rounded transition-all ${isDarkMode ? "bg-(--second-bg-color) text-(--text-color)" : "text-(--text-muted) hover:text-(--text-color)"}`}
+                                className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-semibold rounded-md transition-all ${(isThemeReady && isDarkMode) ? "bg-white text-black shadow-sm" : "text-(--text-muted) hover:text-(--text-color)"}`}
                             >
+                                <i className="bx bx-moon text-[12px]"></i>
                                 Dark
                             </button>
                         </div>

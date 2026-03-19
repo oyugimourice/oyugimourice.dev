@@ -65,6 +65,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.theme-switching *,
+.theme-switching *::before,
+.theme-switching *::after {
+  transition: none !important;
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -81,7 +87,7 @@ body {
 }
 
 .sidebar-sticky {
-  @apply lg:sticky top-0 lg:h-screen w-full lg:w-65.5 border-b lg:border-b-0 lg:border-r-0 border-(--border-color) px-4 py-4 lg:px-6 lg:py-7 flex flex-col justify-between;
+  @apply lg:sticky top-0 lg:h-screen w-full lg:w-65.5 border-b lg:border-b-0 lg:border-r-0 border-(--border-color) px-4 pt-6 pb-4 lg:px-6 lg:pt-9 lg:pb-7 flex flex-col justify-between;
 }
 
 .content-area {
