@@ -18,7 +18,7 @@ export default function Latest() {
                     viewport={{ once: true }}
                     className="group"
                 >
-                    <Link href="/writing" className="block p-7 bg-[var(--second-bg-color)] rounded-lg border border-[var(--border-color)] relative transition-colors hover:bg-[var(--selection-bg)]/35">
+                    <Link href="/writing/mcp-tools-a2a-messaging-memory" className="block p-7 bg-(--second-bg-color) rounded-lg border border-(--border-color) relative transition-colors hover:bg-(--selection-bg)/35">
                         <div className="flex flex-col gap-6">
                             <div className="flex items-center gap-3">
                                 <span className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-(--text-muted)">
