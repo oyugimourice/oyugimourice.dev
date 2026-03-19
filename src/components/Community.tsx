@@ -30,7 +30,7 @@ export default function Community() {
                             <i className="bx bxl-discord-alt text-sm"></i>
                             Join the Circle
                         </button>
-                        <button className="btn-secondary">
+                        <button className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-(--border-color) bg-(--bg-color) text-(--text-color) text-[11px] font-semibold tracking-wide hover:bg-(--selection-bg) transition-colors dark:bg-white dark:text-black dark:border-white/30 dark:hover:bg-white/90">
                             Join our Newsletter
                         </button>
                     </div>

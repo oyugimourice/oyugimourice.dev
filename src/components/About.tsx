@@ -47,17 +47,17 @@ export default function About() {
                             transition={{ delay: index * 0.1 }}
                         >
                             <div className="flex flex-col gap-4">
-                                <span className="text-[10px] font-semibold tracking-widest uppercase text-(--text-muted)">
+                                <span className="text-[10px] font-semibold tracking-widest uppercase text-neutral-400">
                                     {service.tag}
                                 </span>
-                                <h3 className="text-[1.7rem] font-medium tracking-tight leading-tight max-w-md text-(--text-color)">
+                                <h3 className="text-[1.7rem] font-medium tracking-tight leading-tight max-w-md text-neutral-100">
                                     {service.title}
                                 </h3>
-                                <p className="text-[13px] text-(--text-muted) leading-relaxed max-w-xl">
+                                <p className="text-[13px] text-neutral-300 leading-relaxed max-w-xl">
                                     {service.desc}
                                 </p>
                             </div>
-                            <button className="w-max px-3 py-1.5 bg-(--bg-color) border border-(--border-color) rounded-md text-[10px] font-semibold uppercase tracking-widest text-(--text-color) hover:bg-(--selection-bg) transition-colors">
+                            <button className="w-max px-3 py-1.5 bg-white border border-white/30 rounded-md text-[10px] font-semibold uppercase tracking-widest text-neutral-900 hover:bg-neutral-100 transition-colors">
                                 {service.button}
                             </button>
                         </motion.div>
