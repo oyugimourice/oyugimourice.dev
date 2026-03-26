@@ -47,24 +47,37 @@ export default function Header() {
     useEffect(() => {
         if (pathname !== "/") return;
 
-        const handleScroll = () => {
-            const sections = ["home", "about", "skills", "portfolio", "contact"];
-            let currentSection = "home";
+        const sectionIds = ["home", "about", "skills", "portfolio", "contact"];
+        const sectionElements = sectionIds
+            .map((id) => document.getElementById(id))
+            .filter((el): el is HTMLElement => Boolean(el));
 
-            for (const section of sections) {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 200) {
-                        currentSection = section;
-                    }
-                }
+        const handleScroll = () => {
+            // Throttle scroll work to once per animation frame to avoid layout thrash.
+            // Also compute which section is currently "passed" the threshold and only update state if it changed.
+            let currentSection = "home";
+            for (const el of sectionElements) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= 200) currentSection = el.id;
             }
-            setActiveSection(currentSection);
+            setActiveSection((prev) => (prev === currentSection ? prev : currentSection));
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                ticking = false;
+                handleScroll();
+            });
+        };
+
+        // Initialize active section immediately on mount.
+        handleScroll();
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
     }, [pathname]);
 
     const toggleTheme = (type: "light" | "dark") => {

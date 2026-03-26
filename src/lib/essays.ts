@@ -82,10 +82,20 @@ export async function getEssaySlugs() {
 }
 
 export async function getEssayBySlug(slug: string) {
-    const filePath = path.join(essaysDirectory, `${slug}.mdx`);
+    // Hardening: prevent directory traversal / arbitrary file reads.
+    // Only allow simple "slug" characters we expect in filenames (letters, numbers, hyphen, underscore).
+    const safeSlug = slug.trim();
+    if (!/^[a-zA-Z0-9_-]+$/.test(safeSlug)) return null;
+
+    const filePath = path.join(essaysDirectory, `${safeSlug}.mdx`);
 
     try {
-        const source = await fs.readFile(filePath, "utf8");
+        // Ensure the resolved file path still lives under essaysDirectory.
+        const resolvedDir = `${path.resolve(essaysDirectory)}${path.sep}`;
+        const resolvedFile = path.resolve(filePath);
+        if (!resolvedFile.startsWith(resolvedDir)) return null;
+
+        const source = await fs.readFile(resolvedFile, "utf8");
 
         const { frontmatter, content } = await compileMDX<EssayFrontmatter>({
             source,
@@ -98,7 +108,7 @@ export async function getEssayBySlug(slug: string) {
         });
 
         return {
-            slug,
+            slug: safeSlug,
             frontmatter: {
                 ...frontmatter,
                 date: normalizeDate(frontmatter.date),
