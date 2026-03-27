@@ -6,29 +6,29 @@ import Footer from "@/components/Footer";
 export default function Speaking() {
     const topics = [
         {
-            title: "Build With Intention",
-            desc: "Most products don't fail because of bad code. They fail because nobody stopped to ask why before asking how. I talk about building with clarity — and what changes when purpose comes first."
+            title: "AI-first systems",
+            desc: "How to design agent workflows, evaluation loops, and toolchains that stay maintainable."
         },
         {
-            title: "The Future of Building With AI",
-            desc: "AI isn't a feature anymore, it's a foundation. I share what I'm learning from building AI-first products — the opportunities, the traps, and what it means for founders and teams right now."
+            title: "Decision-making under constraints",
+            desc: "What to decide early, what to postpone, and how to avoid expensive architectural detours."
         },
         {
-            title: "From Engineer to Founder",
-            desc: "It's not a promotion, it's a completely different game. I talk about the shift — the identity crisis, the lone lines, the lessons — and how to make it without losing yourself."
+            title: "From prototype to production",
+            desc: "A practical path from demos to real software: scope, testing, and operational thinking."
         },
         {
-            title: "The Fractional CTO Perspective",
-            desc: "I've sat across from dozens of founders making decisions they weren't sure about. I share the patterns — what works, what doesn't, and what I wish someone had told me earlier."
+            title: "Hiring for signal",
+            desc: "Structure interviews and reviews so you hire for judgment—then help teams deliver."
         },
         {
-            title: "Purpose Before Code",
-            desc: "A talk about intention. About slowing down before speeding up. About building things that matter — not just things that ship."
+            title: "Reliability for AI features",
+            desc: "Evaluation, monitoring, and feedback loops that keep AI behavior predictable."
         },
         {
             title: "Something else?",
-            desc: "If you have a theme in mind, let's shape something together. The best talks come from real conversations.",
-            link: "Start a conversation —"
+            desc: "Tell me your audience and goals. I’ll tailor a talk around your context.",
+            link: "Start a conversation →"
         }
     ];
 
@@ -48,10 +48,10 @@ export default function Speaking() {
                     <div className="flex flex-col gap-6 max-w-3xl">
                         <p className="section-label">Speaking</p>
                         <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
-                            Lessons worth sharing.
+                            Talks built for action.
                         </h1>
                         <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl">
-                            Honest lessons from years of building products, leading teams, and figuring it out along the way. If your audience wants substance over polish, we&apos;ll get along.
+                            Practical insights on AI-first engineering, product decisions, and shipping systems that people can trust.
                         </p>
                         <button className="btn-primary w-max mt-1">
                             <i className="bx bx-calendar text-sm"></i>
@@ -65,16 +65,16 @@ export default function Speaking() {
                             <h2 className="text-[2rem] font-medium tracking-tight">Why I speak.</h2>
                         </div>
                         <div className="flex flex-col gap-6 text-(--text-muted) leading-relaxed">
-                            <p>I kept having the same conversations with founders, with engineers, with people trying to build something that matters and I realized these lessons might help more than just the person in front of me.</p>
-                            <p>I speak about building. About clarity. About intention. About the messy, unglamorous work of turning ideas into something real.</p>
-                            <p>If that resonates with your audience, I&apos;d love to be part of what you&apos;re creating.</p>
+                            <p>I’ve seen teams move fast in the wrong direction—and recover with better decisions.</p>
+                            <p>I speak about engineering clarity: choosing the right architecture, setting up evaluation, and building systems that stay reliable.</p>
+                            <p>If your audience wants usable frameworks—not vague motivation—we’ll get along.</p>
                         </div>
                     </div>
 
                     <div className="section-block flex flex-col gap-8">
                         <div>
                             <p className="section-label">Talk Topics</p>
-                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Ideas I keep coming back to.</h2>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Core themes.</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 border border-(--border-color) rounded-xl overflow-hidden">
                             {topics.map((t, i) => (
@@ -109,10 +109,10 @@ export default function Speaking() {
                         </div>
                         <div className="flex flex-col gap-0 border-t border-(--border-color)">
                             {[
-                                { label: "Based in", value: "Nairobi, Available anywhere." },
-                                { label: "Virtual", value: "Absolutely — for podcasts, webinars, remote events." },
-                                { label: "Fees", value: "Vary by format, travel, and context. Let's have a conversation." },
-                                { label: "Lead Time", value: "More is better, but I'll make it work for the right fit." }
+                                { label: "Based in", value: "Available worldwide." },
+                                { label: "Virtual", value: "Yes—webinars, podcasts, remote sessions." },
+                                { label: "Fees", value: "Depends on scope. Let&apos;s discuss." },
+                                { label: "Lead Time", value: "Two to six weeks when possible." }
                             ].map((detail, i) => (
                                 <div key={i} className="grid grid-cols-1 md:grid-cols-[200px_1fr] py-6 border-b border-(--border-color) group hover:bg-(--selection-bg) px-4 transition-colors">
                                     <span className="font-bold text-sm tracking-tight">{detail.label}</span>
@@ -124,15 +124,15 @@ export default function Speaking() {
 
                     <div className="section-block flex flex-col gap-5">
                         <p className="section-label">Let&apos;s Talk</p>
-                        <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">If this feels right, let&apos;s talk.</h2>
-                        <p className="text-[15px] text-(--text-muted) max-w-2xl">Tell me about your event. Who&apos;s in the room. What you&apos;re hoping they walk away with. I&apos;d love to hear what you&apos;re building.</p>
+                        <h2 className="text-[2.15rem] md:text-[2.4rem] font-medium tracking-tight">Let&apos;s plan your session.</h2>
+                        <p className="text-[15px] text-(--text-muted) max-w-2xl">Share your audience, format, and goals. I&apos;ll respond with a tailored outline and next steps.</p>
                         <div className="flex items-center gap-6 mt-4">
                             <button className="btn-primary">
                                 <i className="bx bx-calendar text-sm"></i>
-                                Start a Conversation
+                                Request availability
                             </button>
                             <Link href="#" className="text-sm font-bold border-b border-(--text-color) pb-1 hover:border-transparent transition-all">
-                                Or email me — I read everything.
+                                Prefer email? I&apos;ll reply with next steps.
                             </Link>
                         </div>
                     </div>

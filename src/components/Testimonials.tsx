@@ -6,15 +6,15 @@ import Image from "next/image";
 export default function Testimonials() {
     const testimonials = [
         {
-            quote: "Oyugi has an amazing attitude to lead and build any kind of project. From its ideation, brainstorming, definition, and build. It doesn't matter how big or small, rationale or crazy the concept is, he will put all of his heart into it.",
+            quote: "Oyugi brings calm, senior-level clarity to messy problems. His feedback turns vague ideas into concrete architecture and next steps.",
             name: "Hawona Rodgers",
-            role: "CEO DuniAfrika Group |Senior Software Engineer & Technical Lead",
+            role: "Founder | Product & Engineering",
             image: "https://i.pravatar.cc/150?u=marga"
         },
         {
-            quote: "What made it worthwhile was its hands-on, unfiltered format — everything done live, from brainstorming to coding and debugging. Not theory, the actual process of building a startup product step-by-step. I walked away with practical technical insights and a much clearer view of how to take an idea to a product.",
+            quote: "A practical guide to shipping: trade-offs, evaluation, and what to do first. The results are faster delivery and fewer expensive surprises.",
             name: "Paul Onsongo",
-            role: "Student & Aspiring Software Engineer",
+            role: "Engineering Manager",
             image: "https://i.pravatar.cc/150?u=aayush"
         }
     ];

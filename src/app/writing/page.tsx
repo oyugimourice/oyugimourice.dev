@@ -13,7 +13,7 @@ export default async function Writing() {
                         <p className="section-label">Writing</p>
                         <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-(--text-color)">Essays</h1>
                         <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
-                            Long-form thinking on AI, building, and what it means to create with intention.
+                            Long-form essays on AI-first engineering: architecture, trade-offs, and what to do next.
                         </p>
                     </div>
 

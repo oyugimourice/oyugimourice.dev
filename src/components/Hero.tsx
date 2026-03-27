@@ -13,18 +13,17 @@ export default function Hero() {
                 className="flex flex-col gap-6"
             >
                 <h1 className="text-[2.6rem] md:text-[3.05rem] font-medium tracking-tight text-(--text-color) leading-[1.04]">
-                    Build With Intention
+                    Build What Lasts
                 </h1>
 
                 <p className="text-[15px] md:text-base text-(--text-muted) max-w-2xl leading-relaxed">
-                    Great tech starts with purpose, not code. I help founders <br className="hidden md:block" />
-                    turn clarity into product.
+                    Great products start with decisions. I help teams ship reliable software—fast, and with less rework.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mt-2">
                     <Link href="/newsletter" className="btn-primary">
                         <i className="bx bx-envelope text-sm"></i>
-                        Join the Newsletter
+                        Get Updates
                     </Link>
                     <Link href="/work-with-me" className="btn-secondary">
                         <i className="bx bx-briefcase-alt-2 text-sm"></i>

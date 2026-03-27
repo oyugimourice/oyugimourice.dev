@@ -6,23 +6,23 @@ import Footer from "@/components/Footer";
 export default function Newsletter() {
     const pillars = [
         {
-            title: "Intention",
-            desc: "Focusing on the 'why' and finding clarity before you write a single line of code."
+            title: "Decisions",
+            desc: "What to choose early—and how to avoid architectural regret."
         },
         {
-            title: "Insight",
-            desc: "Lessons from the front lines of building products, leading teams, and scaling ideas."
+            title: "Systems",
+            desc: "Patterns for AI-first products that stay reliable as you scale."
         },
         {
-            title: "Action",
-            desc: "Practical, immediate takeaways that you can apply to your work today."
+            title: "Shipping",
+            desc: "Small, practical moves you can apply the same day."
         }
     ];
 
     const issues = [
-        { date: "2026-03-08", title: "#11 Build With Intention | To the Women Building in Silence" },
-        { date: "2026-03-01", title: "#10 Build With Intention | The Deadline That Broke My Excuses" },
-        { date: "2026-02-22", title: "#9 Build With Intention | Pivoting Isn't Failure. Staying Stuck Is." }
+        { date: "2026-03-08", title: "#11 AI-first architecture: the choices that compound" },
+        { date: "2026-03-01", title: "#10 Shipping under pressure: scope, evaluation, and feedback" },
+        { date: "2026-02-22", title: "#9 Turning experiments into production systems" }
     ];
 
     return (
@@ -33,10 +33,10 @@ export default function Newsletter() {
                     <div className="flex flex-col gap-6 max-w-3xl">
                         <p className="section-label">Newsletter</p>
                         <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
-                            Build With Intention
+                            Weekly engineering notes
                         </h1>
                         <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl">
-                            Every Sunday, I share one idea to help you build smarter ~ as a founder, leader, or engineer.
+                            One email a week with practical AI-first engineering decisions—short, useful, and straight to the point.
                         </p>
 
                         <form className="flex flex-col gap-5 mt-2 p-6 bg-(--second-bg-color) rounded-lg border border-(--border-color)">
@@ -69,7 +69,7 @@ export default function Newsletter() {
                     <div className="section-block flex flex-col gap-8">
                         <div>
                             <p className="section-label">What To Expect</p>
-                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Three pillars, one idea each week</h2>
+                            <h2 className="text-[2rem] font-medium tracking-tight mt-2">Three themes, one email a week</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {pillars.map((p, i) => (
@@ -88,7 +88,7 @@ export default function Newsletter() {
                         <div className="flex justify-between items-end">
                             <div>
                                 <p className="section-label">Previous Editions</p>
-                                <h2 className="text-[2rem] font-medium tracking-tight mt-2">See what&apos;s inside</h2>
+                                <h2 className="text-[2rem] font-medium tracking-tight mt-2">Browse editions</h2>
                             </div>
                             <Link href="#" className="text-xs font-bold text-(--text-muted) hover:text-(--text-color) transition-colors">
                                 Browse all →

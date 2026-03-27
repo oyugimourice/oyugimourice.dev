@@ -9,8 +9,8 @@ export default function Ventures() {
         {
             name: "KINARA",
             status: "Active",
-            tagline: "An AI Operating System for Education.",
-            desc: "Kiinara is where my heart is. We're rethinking how students learn ~ with AI at the core. It's the hardest thing I've ever built. And the most meaningful.",
+            tagline: "AI learning systems.",
+            desc: "Kiinara is an AI-first learning product built around feedback loops and measurable outcomes.",
             link: "#",
             linkLabel: "Learn more",
             color: "text-black"
@@ -18,8 +18,8 @@ export default function Ventures() {
         {
             name: "KOSMOS labs",
             status: "Heading to beta",
-            tagline: "Create once, publish everywhere.",
-            desc: "KOSMOS streamlines how pharma teams create, approve, and deploy content ~ with compliance built in from the start.",
+            tagline: "Publish-ready content pipelines.",
+            desc: "KOSMOS helps pharma teams create, review, and deploy content—compliance baked in from day one.",
             link: "#",
             linkLabel: "Learn more",
             color: "text-indigo-600"
@@ -27,8 +27,8 @@ export default function Ventures() {
         {
             name: "ADIMS",
             status: "Active",
-            tagline: "The business system for driving instructors.",
-            desc: "Lesson bookings. Student management. Accounts. Calendar. All in one place. ADIMS helps driving instructors ditch the paper diary and run their business with a click.",
+            tagline: "Operations for driving instructors.",
+            desc: "Bookings, student management, and accounts in one place—so instructors can run their business without spreadsheets.",
             link: "#",
             linkLabel: "Visit ADIMS",
             color: "text-red-600"
@@ -42,9 +42,9 @@ export default function Ventures() {
                     {/* Header */}
                     <div className="flex flex-col gap-2">
                         <p className="section-label">Ventures</p>
-                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-(--text-color)">What I&apos;m building.</h1>
+                        <h1 className="text-[2.3rem] md:text-[2.6rem] font-medium tracking-tight text-(--text-color)">Ventures in motion.</h1>
                         <p className="text-[15px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
-                            These are the businesses I&apos;m actively growing. Each one started with a problem worth solving.
+                            Ventures I&apos;m developing right now—each one starts with a real problem and a plan to ship.
                         </p>
                     </div>
 
@@ -86,7 +86,7 @@ export default function Ventures() {
                             <p className="section-label">Lab</p>
                             <h2 className="text-[2rem] font-medium tracking-tight mt-2">Experiments & open source.</h2>
                             <p className="text-[14px] text-(--text-muted) leading-relaxed max-w-2xl mt-3">
-                                Smaller bets. Prototypes, tools, and open source projects I build in public ~ some ship, some don&apos;t, all teach me something.
+                                Small bets and real prototypes—tools and open source work I build in public. Some ship, some don&apos;t, but everything teaches.
                             </p>
                         </div>
                         <Link href="/lab" className="btn-secondary w-max">

@@ -65,11 +65,11 @@ export default async function EssayPage({ params }: EssayPageProps) {
                     </article>
 
                     <div className="p-8 bg-(--selection-bg) rounded-lg border border-(--border-color) flex flex-col items-center text-center gap-3">
-                        <h2 className="text-[2rem] font-medium tracking-tight text-(--text-color)">Don&apos;t miss the next one.</h2>
-                        <p className="text-[13px] text-(--text-muted)">New essays, ideas, and editions delivered when they&apos;re ready.</p>
+                        <h2 className="text-[2rem] font-medium tracking-tight text-(--text-color)">Want the next essay?</h2>
+                        <p className="text-[13px] text-(--text-muted)">Get updates when new posts go live. No spam—just practical notes.</p>
                         <Link href="/newsletter" className="btn-secondary mt-2">
                             <i className="bx bx-envelope text-sm"></i>
-                            Join the Newsletter
+                            Get Updates
                         </Link>
                     </div>
                 </div>

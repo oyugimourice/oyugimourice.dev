@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 export default function About() {
     const services = [
         {
-            tag: "For: Founders & Startups",
-            title: "I've made the mistakes so you don't have to.",
-            desc: "From strategy to shipped product — I help you make the right decisions, build the right thing, and avoid the mistakes that kill startups.",
+            tag: "For: Founders & Product Teams",
+            title: "Make the right calls early.",
+            desc: "From architecture to hiring to scope, I help you choose the moves that keep your roadmap realistic—and your software maintainable.",
             button: "Book a Call",
             bg: "bg-[#e9f1ed] dark:bg-[#1a2521]"
         },
         {
             tag: "For: Events & Conferences",
-            title: "I share what I've learned — on stages that matter.",
-            desc: "I speak on AI-first development, building with intention, and the future of how we build software. Keynotes, panels, podcasts — let's talk.",
+            title: "Talks that translate into action.",
+            desc: "AI-first engineering, decision-making, and building systems that stay reliable. Keynotes, panels, and practical workshops—let’s shape a session for your audience.",
             button: "Invite Me",
             bg: "bg-[#f4f0e7] dark:bg-[#2a261f]"
         },
         {
-            tag: "For: Developers & Aspiring Founders",
-            title: "Launch your career with purpose.",
-            desc: "From code to career, I help you build skills that compound. Technical growth with intention, not just tutorials.",
+            tag: "For: Developers & Builders",
+            title: "Grow your skill with context.",
+            desc: "Technical growth that compounds: systems thinking, trade-offs, and shipping habits. Less theory—more clarity you can apply immediately.",
             button: "Apply Now",
             bg: "bg-[#efefef] dark:bg-[#202020]",
             fullWidth: true

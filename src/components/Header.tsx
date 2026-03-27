@@ -178,9 +178,9 @@ export default function Header() {
                             <div className="flex items-center justify-between gap-2.5 px-2.5 py-1.5 rounded-md text-[12px] font-medium text-(--text-muted)/70">
                                 <span className="flex items-center gap-2.5">
                                     <i className="bx bx-book-open text-[14px]"></i>
-                                    Founder&apos;s Read
+                                    Engineer Notes
                                 </span>
-                                <span className="text-[10px] tracking-wide">SOON</span>
+                                <span className="text-[10px] tracking-wide">UPCOMING</span>
                             </div>
                         </div>
                     </nav>

@@ -9,7 +9,7 @@ export default function Latest() {
             <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
                     <p className="section-label">Latest</p>
-                    <h2 className="text-[2rem] font-medium tracking-tight text-(--text-color)">Fresh from the desk</h2>
+                    <h2 className="text-[2rem] font-medium tracking-tight text-(--text-color)">Recent essays</h2>
                 </div>
 
                 <motion.div
@@ -26,15 +26,15 @@ export default function Latest() {
                                     Essay
                                 </span>
                                 <span className="text-(--border-color)">•</span>
-                                <span className="text-[10px] font-semibold uppercase tracking-widest text-(--text-muted)">Coming Soon</span>
+                                <span className="text-[10px] font-semibold uppercase tracking-widest text-(--text-muted)">Featured</span>
                             </div>
                             
                             <h3 className="text-[1.85rem] md:text-[2rem] font-medium tracking-tight leading-tight">
-                                MCP Solved Tools. A2A Solved Messaging. What Solves Memory?
+                                What solves memory for agents?
                             </h3>
                             
                             <p className="text-[13px] text-(--text-muted) leading-relaxed max-w-2xl">
-                                The agentic stack is taking shape — but memory remains the missing primitive. This essay explores what comes next.
+                                Agents can coordinate tools and exchange messages. Memory is what makes collaboration durable. This essay breaks down the missing layer.
                             </p>
                         </div>
                         

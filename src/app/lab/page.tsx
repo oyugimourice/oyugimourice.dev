@@ -10,7 +10,7 @@ export default function Lab() {
             title: "Akashik Protocol™",
             tag: "Spec live · Level 0 SDK in progress",
             subtitle: "Shared memory for AI agents.",
-            desc: "An open specification for multi-agent coordination. The missing layer that lets AI agents remember, collaborate, and build on each other's work. Spec-first. Community-driven. Built in public.",
+            desc: "A protocol for persistent agent memory and coordination. It defines how agents store context, reuse decisions, and collaborate across sessions without losing state.",
             links: [
                 { label: "Read more", href: "#" },
                 { label: "GitHub", href: "#" }
@@ -42,10 +42,10 @@ export default function Lab() {
                     <div className="flex flex-col gap-5 max-w-190">
                         <p className="section-label">Lab</p>
                         <h1 className="text-[2.35rem] md:text-[2.7rem] font-medium tracking-tight leading-[1.1]">
-                            Where Ideas go to breathe.
+                            Building in public.
                         </h1>
                         <p className="text-[15px] md:text-[16px] text-(--text-muted) leading-relaxed max-w-2xl mt-1">
-                            Not everything needs to be a business. Some things are experiments. Some are contributions. Some are just fun. This is where I tinker, explore, and build in the open.
+                            The lab is where I test concepts, prototype fast, and publish what works. Some projects become products. Others stay as tools, specs, or useful experiments.
                         </p>
                     </div>
 
@@ -126,8 +126,8 @@ export default function Lab() {
                             <h2 className="text-[2.2rem] font-medium tracking-tight mt-2">Why I keep a lab.</h2>
                         </div>
                         <div className="flex flex-col gap-4 text-(--text-muted) leading-relaxed max-w-2xl text-[15px]">
-                            <p>I believe the best work happens when you&apos;re not trying to optimize for a bottom line. Curiosity needs a sandbox where the primary goal is just to see what happens.</p>
-                            <p>The lab is my sandbox. It&apos;s where I stay sharp, where I fail without consequence, and where I contribute back to the tools and protocols that make my other work possible.</p>
+                            <p>My best ideas come from experimentation, not polished launches. The lab gives me room to test quickly and learn faster.</p>
+                            <p>It keeps my engineering practical: short loops, honest results, and reusable lessons for real products.</p>
                         </div>
                     </div>
 
@@ -135,11 +135,11 @@ export default function Lab() {
                     <div className="section-block flex flex-col gap-4">
                         <h2 className="text-[2.4rem] font-medium tracking-tight">Want to follow along?</h2>
                         <p className="text-[14px] text-(--text-muted) max-w-2xl leading-relaxed">
-                            The newsletter is where I share what&apos;s happening in the lab — experiments, lessons, and the occasional beautiful failure.
+                            I share lab updates in the newsletter: experiments, decisions, and practical takeaways from what I&apos;m building.
                         </p>
                         <Link href="/newsletter" className="btn-secondary w-max mt-1">
                             <i className="bx bx-envelope text-sm"></i>
-                            Join the Newsletter
+                            Get Updates
                         </Link>
                     </div>
                 </div>
