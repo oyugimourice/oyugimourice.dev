@@ -3,7 +3,7 @@ title: Building with Intention in an AI-First World
 date: 2026-02-28
 author: Oyugi Mourice
 excerpt: How we shift from writing code to architecting systems when the cost of production drops to zero.
-readTime: 3 min read
+readTime: 6 min read
 ---
 
 AI has compressed build time so aggressively that shipping is no longer the bottleneck. The bottleneck is judgment. Teams that win are the ones that know what not to build.
@@ -11,3 +11,59 @@ AI has compressed build time so aggressively that shipping is no longer the bott
 Building with intention means starting from outcomes, constraints, and tradeoffs before touching implementation. In an AI-first workflow, architecture and product clarity matter more than keystrokes.
 
 As execution gets cheaper, strategic thinking becomes the most expensive part of software.
+
+## The velocity trap
+
+Something strange happened when AI coding assistants became good enough to trust. Teams didn't slow down to think harder. They sped up — and started building the wrong things faster.
+
+I've seen this play out in real projects. A founder describes a vague idea. An engineer (or an agent) generates a working prototype in an afternoon. Everyone celebrates. Three weeks later, the prototype is entangled with assumptions nobody examined, and pivoting costs more than building from scratch would have.
+
+Speed without direction isn't progress. It's motion.
+
+The old constraint — "we can't build that yet" — forced clarity. You had to prioritize because resources were finite. AI removed that constraint for execution, but not for understanding. If anything, it widened the gap between what you *can* build and what you *should* build.
+
+## From coder to architect
+
+For most of my career, the craft of software engineering was measured in output: lines written, features shipped, bugs closed. AI disrupts that measurement entirely.
+
+When a model can scaffold a CRUD app, write tests, and refactor a module in minutes, the value of typing fast approaches zero. What remains valuable — what compounds — is the ability to:
+
+- **Define the problem precisely.** Vague prompts produce vague software. The engineer who can articulate constraints, edge cases, and success criteria becomes the bottleneck worth paying for.
+
+- **Design systems, not snippets.** AI is excellent at local optimization and mediocre at global coherence. Someone still has to decide how pieces connect, what the boundaries are, and what happens when things fail.
+
+- **Evaluate tradeoffs.** Should this be synchronous or async? Client-side or server-side? Built or bought? These decisions require context AI doesn't have — business context, team context, user context.
+
+- **Maintain quality over velocity.** It's trivially easy to generate code that works once. It's still hard to generate code that's secure, maintainable, observable, and correct under edge cases. Judgment is the filter.
+
+The role is shifting from "person who writes code" to "person who directs systems into existence." That's not a demotion. It's an upgrade — if you lean into it.
+
+## Intention as a workflow
+
+Building with intention isn't a philosophy poster. It's a set of practices that matter more when execution is cheap.
+
+**Write the spec before the prompt.** Even a half-page document — who is this for, what does success look like, what's explicitly out of scope — changes the quality of everything downstream. AI amplifies your clarity or your confusion. There's no neutral.
+
+**Prototype to learn, not to ship.** The first version should answer a question, not launch a product. "Can users complete this flow?" is a better goal than "ship the auth module." Treat early AI-generated code as disposable evidence, not foundation.
+
+**Review like a senior, not a typist.** When code appears instantly, the temptation is to accept it instantly. Don't. Read diffs. Run the code. Ask what assumptions were baked in. The cost of review hasn't dropped — if anything, the volume of generated code makes review more important.
+
+**Kill features early.** Cheap execution makes feature creep easier. Intentional building means having a clear "no" list. Every feature you add is a commitment — to maintenance, to UX complexity, to user expectations. AI won't tell you when to stop. You have to.
+
+## What founders should do differently
+
+If you're a founder in an AI-first world, your advantage isn't access to the tools. Everyone has that. Your advantage is conviction about the problem you're solving.
+
+Use AI to explore the solution space quickly — but don't outsource the problem space. Talk to users. Write down what you've learned. Make decisions that AI can't make for you: who you're serving, what you're willing to ignore, what "good enough" means for v1.
+
+The founders I see winning aren't the ones generating the most code. They're the ones who spend the most time getting the question right before they let the machines answer it.
+
+## The new scarcity
+
+Every technological shift redistributes scarcity. Cloud computing made infrastructure cheap and architecture expensive. Mobile made distribution cheap and attention expensive. AI is making execution cheap and judgment expensive.
+
+That reframe should change how you invest your time. Less on boilerplate. More on understanding users. Less on debating frameworks. More on defining boundaries. Less on shipping for the sake of shipping. More on building things that deserve to exist.
+
+The teams that thrive in an AI-first world won't be the fastest. They'll be the most intentional — the ones who treat every line of generated code as a decision that still belongs to a human who knows why it matters.
+
+Execution got cheaper. Meaning didn't. Build accordingly.

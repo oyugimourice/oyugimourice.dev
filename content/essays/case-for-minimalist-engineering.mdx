@@ -3,7 +3,7 @@ title: The Case for Minimalist Engineering
 date: 2026-02-15
 author: Oyugi Mourice
 excerpt: Why the best code is the code you never wrote, and why simplicity is the ultimate sophistication in software design.
-readTime: 2 min read
+readTime: 5 min read
 ---
 
 Most complexity enters systems as future-proofing that never pays off. We add abstractions early, then spend months maintaining accidental architecture.
@@ -11,3 +11,55 @@ Most complexity enters systems as future-proofing that never pays off. We add ab
 Minimalist engineering is not anti-scale. It's pro-clarity. Build the smallest surface area that solves today's problem, then evolve intentionally.
 
 The systems that endure are usually the ones with fewer moving parts, stronger defaults, and fewer places for bugs to hide.
+
+## Complexity is a loan
+
+Every layer you add — every wrapper, every indirection, every "just in case" interface — is a loan against future attention. You pay interest every time someone new joins the team, every time you debug a production issue at 2 a.m., every time a dependency upgrades and breaks something three levels deep.
+
+I've watched teams spend quarters building plugin architectures for products that never needed plugins. I've seen microservice boundaries drawn before anyone understood the domain. The intent was always reasonable: stay flexible, avoid rework, build it right the first time. The outcome was almost always the same — a system that was harder to change than the monolith it replaced.
+
+Minimalist engineering treats complexity as expensive and defaults to simplicity until evidence proves otherwise.
+
+## What minimalism actually means
+
+This is not about writing less code for its own sake. It's about writing *only* the code that earns its place.
+
+**Start with the problem, not the pattern.** Before reaching for event sourcing, CQRS, or a custom DSL, ask whether a function and a database table would do. Often they will — for longer than you expect.
+
+**Prefer deletion over addition.** The best refactor I've ever done wasn't a rewrite. It was removing 40% of a codebase that nobody was using. The system got faster, tests got simpler, and onboarding dropped from weeks to days.
+
+**Make the common path obvious.** Good defaults beat configuration. If 90% of users need the same behavior, encode that behavior directly. Don't make everyone pay the cognitive cost of options they'll never touch.
+
+**Optimize for readability over cleverness.** The person maintaining your code in two years might be you, on a bad day, without context. Write for that person.
+
+## Minimalism scales — when you scale intentionally
+
+There's a fair objection: "Simple doesn't scale." True — if you define scale as "never change anything." But the teams that scale well don't start complex. They start clear, then add structure at the points where pain actually appears.
+
+Stripe didn't begin with a distributed ledger. Amazon didn't launch with microservices. They built small, learned fast, and extracted abstractions from real friction — not imagined future friction.
+
+When you do need to add complexity, you'll know. The signs are unmistakable: repeated copy-paste across modules, performance bottlenecks you can measure, team boundaries that genuinely conflict. At that point, the abstraction has evidence behind it. It will survive contact with reality.
+
+## The discipline of saying no
+
+Minimalist engineering is as much about product discipline as technical taste. Every feature request is a permanent resident in your codebase. Every integration is a relationship you maintain. Every config option is a question someone has to answer.
+
+The hardest skill in software isn't writing elegant code. It's declining to write code at all — or writing less of it — because the problem doesn't warrant the solution yet.
+
+Before you build, ask:
+
+- What happens if we don't build this?
+- What's the smallest version that teaches us something?
+- Can we solve this with a process change instead of a system change?
+
+These questions feel slow. They are. They're also how you avoid building things nobody needed.
+
+## What endures
+
+The systems I still admire years later share a few traits. They do one thing well. Their boundaries are visible without a diagram. You can trace a request from entry to exit in a single sitting. When something breaks, the failure is localized — not spread across twelve services and a message bus nobody fully understands.
+
+That's not nostalgia for simpler times. It's a design principle that compounds. Less code means fewer bugs. Fewer dependencies mean fewer surprises. Clearer architecture means faster teams.
+
+The best code is often the code you never wrote — because you found a simpler path, or waited until the problem was real enough to deserve a real solution.
+
+Simplicity isn't the absence of ambition. It's ambition with direction.

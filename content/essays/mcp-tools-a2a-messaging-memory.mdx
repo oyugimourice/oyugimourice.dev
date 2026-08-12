@@ -3,7 +3,7 @@ title: MCP Solved Tools. A2A Solved Messaging. What Solves Memory?
 date: 2026-03-10
 author: Oyugi Mourice
 excerpt: The agentic stack is taking shape — but memory remains the missing primitive. This essay explores what comes next.
-readTime: 1 min read
+readTime: 7 min read
 ---
 
 Every AI agent protocol guide in 2026 tells the same story: MCP for tools, A2A for messaging, problem solved. But spend a week building a multi-agent system and you'll hit a wall nobody's writing about — your agents can't remember together.
@@ -11,3 +11,91 @@ Every AI agent protocol guide in 2026 tells the same story: MCP for tools, A2A f
 Context doesn't accumulate. Contradictions go undetected. Findings disappear between calls. This essay breaks down the third layer the agent stack is missing, why existing solutions don't fill it, and what a shared memory protocol needs to get right.
 
 The next wave of AI products won't be defined by model quality alone. They'll be defined by continuity — how reliably systems learn, recall, and coordinate across sessions, users, and time.
+
+## The stack so far
+
+The agentic infrastructure story has crystallized faster than most of us expected.
+
+**MCP (Model Context Protocol)** gave agents a standard way to reach the outside world — file systems, APIs, databases, browsers. Before MCP, every tool integration was bespoke. Now you plug in a server, expose capabilities as structured resources, and any compatible client can use them. Tools stopped being the hard part.
+
+**A2A (Agent-to-Agent protocol)** addressed the coordination layer. When multiple agents need to delegate, negotiate, or hand off work, they need a shared language for intent, not just data. A2A provides that — message formats, task lifecycle, capability discovery between agents. Messaging stopped being ad hoc.
+
+These two layers solved real problems. I've built with both, and the difference from a year ago is tangible. You spend less time wiring plumbing and more time on actual agent behavior.
+
+But there's a third problem neither protocol was designed to solve: **shared, durable, queryable memory across agents and sessions.**
+
+## The memory wall
+
+Here's what breaks in practice.
+
+You deploy a research agent and a writing agent. The research agent spends twenty minutes gathering sources, synthesizing findings, and flagging contradictions. It passes a summary to the writing agent via A2A. The writing agent produces a draft.
+
+Fine so far.
+
+Now the user asks a follow-up: "What was the strongest counterargument in the sources?" The writing agent doesn't know. The research agent's session ended. The summary was lossy. The raw findings live in a context window that no longer exists.
+
+Or worse: two agents working in parallel reach different conclusions about the same entity — one calls a customer "enterprise," the other calls them "mid-market" — and neither detects the conflict because they don't share a memory substrate.
+
+Or the common case: a user returns three days later and the system treats them like a stranger. No accumulated preferences. No record of past decisions. No thread of reasoning to continue.
+
+This isn't a model problem. GPT-5, Claude, Gemini — pick your favorite — all fail the same way when context is ephemeral and fragmented. Better models with bigger windows help at the margins. They don't solve coordination.
+
+## Why current approaches fall short
+
+The industry has tried several workarounds. Each solves a slice. None solves the layer.
+
+**Longer context windows.** More room isn't memory. It's a bigger whiteboard that gets erased when the session ends. You can't query it, version it, share it, or resolve conflicts within it.
+
+**RAG over documents.** Retrieval helps agents find relevant information, but it treats memory as search — pull similar chunks, hope they're current. It doesn't model state, relationships, or the evolution of knowledge over time. RAG finds fragments. Memory maintains coherence.
+
+**Per-agent vector stores.** Better than nothing, but siloed. Agent A's embeddings don't talk to Agent B's. You get parallel amnesia instead of shared amnesia.
+
+**Conversation history as memory.** Storing chat logs is not the same as maintaining structured knowledge. Logs are noisy, redundant, and expensive to reason over. You need distilled, addressable, updatable facts — not a transcript.
+
+**Human-in-the-loop note-taking.** Some teams literally have agents write markdown files to disk as a memory hack. It works until it doesn't — no schema, no conflict resolution, no access control, no query semantics. It's memory cosplaying as file I/O.
+
+## What a memory protocol needs
+
+If MCP standardizes tools and A2A standardizes messaging, the memory layer needs its own contract. Here's what I'd argue it must include.
+
+### Shared address space
+
+Agents need to read and write to a common knowledge store — not copy summaries between context windows. Think less "pass a message" and more "update the shared record." When the research agent learns something, it writes to a location any authorized agent can query.
+
+### Structured, not just semantic
+
+Vector similarity is useful for recall, but memory also needs structure: entities, relationships, timestamps, confidence scores, provenance. "The user prefers dark mode" is a fact. "We decided to use PostgreSQL on March 3rd because of JSON support requirements" is a decision with context. Both need to be stored differently and retrieved differently.
+
+### Conflict detection and resolution
+
+When two agents update the same fact, the system needs to notice. Memory without consistency is just distributed confusion. Resolution strategies will vary — last-write-wins for preferences, human escalation for contradictions, merge for complementary findings — but the protocol needs hooks for all of them.
+
+### Temporal awareness
+
+Memory isn't a snapshot. It's a timeline. Agents should know not just what's true now, but what was believed before and when it changed. This matters for debugging agent behavior, auditing decisions, and continuing long-running work without stale assumptions.
+
+### Scoped access
+
+Not every agent should see everything. A customer-facing agent shouldn't access internal debugging notes. A billing agent shouldn't read HR data. Memory needs the same permission model we expect from any shared datastore — scoped, auditable, revocable.
+
+### Session continuity
+
+When a user returns, the system should resume — not restart. That means persisting user-specific state, open tasks, unresolved questions, and preferences across sessions without requiring the user to re-explain their context.
+
+## What this unlocks
+
+Get memory right and the agentic stack changes character entirely.
+
+Multi-agent workflows become genuinely collaborative instead of relay-race handoffs. Agents build on each other's work instead of rediscovering it. Products feel continuous instead of amnesiac. The difference between a demo and a system people trust is often just this — does it remember?
+
+The companies that figure out shared agent memory first will have a moat that model access alone can't replicate. Models commoditize. Context compounds.
+
+## The open question
+
+Nobody has shipped the definitive memory protocol yet. There are experiments — graph stores with agent write access, shared knowledge bases with event sourcing, custom middleware that syncs state between agent runtimes. All early. All partial.
+
+What's clear is that the problem is real and growing. As teams move from single-agent demos to multi-agent production systems, the memory wall gets hit harder and sooner.
+
+MCP solved tools. A2A solved messaging. The next standard worth building — or adopting, if someone gets there first — is the one that lets agents remember together.
+
+Until then, every multi-agent architecture is two-thirds complete. And the missing third is the one users actually feel.
